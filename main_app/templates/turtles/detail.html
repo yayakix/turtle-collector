@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %} {% block content %}
+
+<h1>turtle Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ turtle.name }}</span>
+    <p>Breed: {{ turtle.breed }}</p>
+    <p>Description: {{ turtle.description }}</p>
+    {% if turtle.age > 0 %}
+    <p>Age: {{ turtle.age }}</p>
+    {% else %}
+  
+      <p>Age: Kitten</p>
+    {% endif %}
+  </div>
+  <!-- Add the following markup -->
+  <div class="card-action">
+    <a href="{% url 'turtles_update' turtle.id %}">Edit</a>
+    <a href="{% url 'turtles_delete' turtle.id %}">Delete</a>
+  </div>
+  <!-- New markup above -->
+</div>
+
+{% endblock %}

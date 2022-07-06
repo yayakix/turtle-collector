@@ -3,12 +3,21 @@
 <h1>Turtle List</h1>
 
 {% for turtle in turtles %}
+
 <div class="card">
+  <!-- add this single line below -->
+  <a href="/turtles/{{ turtle.id }}">
   <div class="card-content">
-    <span class="card-title">{{ turtle.name }}</span>
+            <div class="row">
+      <div class="col s6">   
+     <span class="card-title">{{ turtle.name }}</span>
     <p>Breed: {{ turtle.breed }}</p>
     <p>Description: {{ turtle.description }}</p>
     <p>Age: {{ turtle.age }}</p>
   </div>
+      <div class="col s6"><img src={{ turtle.image }}></div>
+    </div>
+  </div>
+  </a>
 </div>
 {% endfor %} {% endblock %}

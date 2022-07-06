@@ -13,3 +13,6 @@ footer {
   padding-top: 0;
   text-align: right;
 }
+img{
+   max-width:300px;
+}
