@@ -8,7 +8,6 @@ MEALS = (
     ('L', 'Lunch'),
     ('D', 'Dinner')
 )
-
 class Turtle(models.Model):
     name = models.CharField(max_length=100)
     breed = models.CharField(max_length=100)
@@ -19,7 +18,6 @@ class Turtle(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'turtle_id': self.id})
 
-# Add new Feeding model below Cat model
 class Feeding(models.Model):
     date = models.DateField('feeding date')
     meal = models.CharField(
