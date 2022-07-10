@@ -18,6 +18,8 @@ urlpatterns = [
     path('toys/<int:pk>/delete/', views.ToyDelete.as_view(), name='toys_delete'),
     path('turtles/<int:turtle_id>/assoc_toy/<int:toy_id>/', views.assoc_toy, name='assoc_toy'),
     path('turtles/<int:turtle_id>/assoc_toy/<int:toy_id>/delete/', views.assoc_toy_delete, name='assoc_toy_delete'),
-
+    # new users
+    path('accounts/signup/', views.signup, name='signup'),
+  
 ]
 
